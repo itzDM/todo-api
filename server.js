@@ -30,7 +30,8 @@ app.get("/", (req, res) => {
 app.use("/user", userRoute);
 app.use("/todo", todoRoute);
 
+const port = process.env.PORT || 3000;
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server is Running On ${process.env.PORT} `);
+app.listen(port, () => {
+    console.log(`Server is Running On ${port} `);
 });
